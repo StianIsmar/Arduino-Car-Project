@@ -12,6 +12,16 @@ const int echoPin = 10;
 const int ledPin =  LED_BUILTIN;// the number of the LED pin
 const int analogueOutLED = 2; // Analog out pin for external LED
 
+// For the stepmotor:
+const int IN1 = 3;
+const int IN2 = 4;
+const int IN3  =5;
+const int IN4 = 6;
+int Steps = 4096; //4096 or 768
+int cstep = 0;
+
+
+
 // defines variables
 
 long duration;
@@ -24,6 +34,13 @@ void setup() {
 pinMode(trigPin, OUTPUT); // Sets the trigPin as an Output
 pinMode(echoPin, INPUT); // Sets the echoPin as an Input
 pinMode(ledPin, OUTPUT);
+
+// Motor:
+ pinMode(IN1, OUTPUT); 
+  pinMode(IN2, OUTPUT); 
+  pinMode(IN3, OUTPUT); 
+  pinMode(IN4, OUTPUT); 
+
 
 Serial.begin(9600); // Starts the serial communication
 }
@@ -65,4 +82,22 @@ Serial.print("Distance: ");
 Serial.println(distance);
 Serial.println("ELLO");
 Serial.println(outputValue);
+
+//Motor:
+
+ for(int x=0;x<Steps;x++)
+  {
+  step1();
+  //delay(1);
+  delayMicroseconds(2500);
+  }
+  Serial.println("Boom!!");
+  delay(1000);
 }
+void step1()
+{   
+     digitalWrite(IN1, HIGH); 
+     digitalWrite(IN2, HIGH);
+     digitalWrite(IN3, HIGH);
+     digitalWrite(IN4, HIGH);  
+  }

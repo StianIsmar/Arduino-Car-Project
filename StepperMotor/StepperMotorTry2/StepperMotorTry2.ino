@@ -1,9 +1,13 @@
+//original source is http://www.geeetech.com/wiki/index.php/Stepper_Motor_5V_4-Phase_5-Wire_%26_ULN2003_Driver_Board_for_Arduino
+// This code is used with a video tutorial for RoboJax.com
+// Published on March 27, 2017 from Aajx, ON, Canada.
+
 int Pin1 = 10; 
 int Pin2 = 11; 
 int Pin3 = 12; 
 int Pin4 = 13; 
 int _step = 0; 
-boolean dir = true;// false=clockwise, true=counter clockwise
+boolean dir = false;// false=clockwise, true=counter clockwise
 int count=0;
 void setup() 
 { 
@@ -84,3 +88,4 @@ void setup()
  delay(1); 
 
 }
+

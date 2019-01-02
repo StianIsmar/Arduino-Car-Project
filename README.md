@@ -1,4 +1,5 @@
 # Arduino-Car-Project
 
-A Christmas project where I put together a small vehicle driven by a stepper motor, which could go in one direction and reverse if there was an object in front.
-An Arduino UNO was used, as well as a motor controller, 5V stepper motor and a Ultrasonic distance sensor.
+This repo is for a Christmans holiday project where I put together a small vehicle. The vehicle was driven by a stepper motor, and would go in one direction. If an obstacle was sensed in front, the motor would change its direction and the vehicle would go in the opposite direction.
+
+An Arduino UNO was used with a stepper motor (5V), motor controller and an ultrasonic distance sensor.
